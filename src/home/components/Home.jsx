@@ -3,12 +3,15 @@ import './Home.css'; // Assuming you have a CSS file for styling
 import { motion } from 'framer-motion';
 import { LinkedIn , WhatsApp, Email} from "@mui/icons-material";
 import { Grid, Typography, Link, IconButton } from "@mui/material";
+import AnimatedLogo from './ReactLogo'; // Import the animated logo component
+
 
 
 function Homeview() {
   const rawPhoneNumber = "+54 11 2604-2925";
   const formattedPhoneNumber = rawPhoneNumber.replace(/\D/g, "");
   return (
+    
      <motion.div
       className="projects-container"
       initial={{ opacity: 0, y: 20 }}
@@ -19,6 +22,9 @@ function Homeview() {
     
     <div className="home-container">
       <div className="home-content">
+        <div className="logo">
+        <AnimatedLogo />
+        </div>
         <h1>Santiago Taher</h1>
         <h2>Desarrollador Full Stack</h2>
         <p>¡Bienvenido a mi portafolio!</p>
@@ -53,6 +59,8 @@ function Homeview() {
       </div>
  
     </div>
+    
+
     </motion.div>
     
   );

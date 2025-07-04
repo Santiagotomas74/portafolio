@@ -47,3 +47,35 @@
   font-size: 1.15rem;
   color: #1b263b;
 }
+
+@media (max-width: 975px) {
+  .about-wrapper {
+    margin-left: 0;
+    padding: 20px 16px;
+  }
+
+  .about-container {
+    padding: 24px;
+    border-radius: 10px;
+  }
+
+  .about-container h1 {
+    font-size: 2rem;
+  }
+
+  .about-container h2 {
+    font-size: 1.2rem;
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+
+  .about-container p,
+  .about-container li {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .intro {
+    font-size: 1.05rem;
+  }
+}

@@ -62,7 +62,7 @@ function Contactview() {
         <input
           type="text"
           name="name"
-          placeholder="Tu nombre"
+          placeholder="Tu nombre..."
           required
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -70,7 +70,7 @@ function Contactview() {
         <input
           type="email"
           name="email"
-          placeholder="Tu email"
+          placeholder="Tu email..."
           required
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}

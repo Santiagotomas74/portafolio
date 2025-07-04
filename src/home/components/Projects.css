@@ -48,3 +48,43 @@
 .project-button{
   color: #fff;
 }
+@media (max-width: 975px) {
+  .projects-container {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .titulo {
+    font-size: 2rem;
+ 
+    padding: 0 10px;
+  }
+
+  .project-card {
+    max-width: 100%;
+    padding: 16px;
+    margin: 20px auto;
+  }
+
+  .project-card h2 {
+    font-size: 1.3rem;
+  }
+
+  .project-card ul {
+    padding-left: 20px;
+    font-size: 1rem;
+  }
+
+  .project-card p {
+    font-size: 1rem;
+  }
+
+  .project-button {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .home-neon-wrapper2 {
+    padding: 0 10px;
+  }
+}

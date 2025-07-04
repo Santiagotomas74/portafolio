@@ -1,5 +1,5 @@
 .contact-container {
-  max-width: 750px;
+  max-width: 700px;
   margin: 40px auto;
   padding: 40px 30px;
   background-color: #fdfdfd;
@@ -80,4 +80,40 @@
 .contact-form button:hover {
   background-color: #0096c7;
   transform: scale(1.02);
+}
+
+@media (max-width: 975px) {
+  .contact-container {
+    margin: 20px 15px;
+    padding: 25px 20px;
+  }
+
+  .contact-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .contact-container p {
+    font-size: 1rem;
+    padding: 0 5px;
+  }
+
+  .contact-info {
+    margin-top: 20px;
+    font-size: 0.95rem;
+  }
+
+  .contact-form {
+    gap: 14px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .contact-form button {
+    font-size: 1rem;
+    padding: 12px;
+  }
 }

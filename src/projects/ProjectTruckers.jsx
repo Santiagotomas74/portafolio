@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 function ProjectTruckers() {
   const navigate = useNavigate();
   return (
-    <div>
+    <>
       <div className="back-button-container">
         <Tooltip title="Volver">
           <IconButton onClick={() => navigate("/projects")} >
@@ -16,7 +16,9 @@ function ProjectTruckers() {
           </IconButton>
         </Tooltip>
       </div>
+      
     <div className="project-detail-container">
+       
      
       <h1>Truckers Talent</h1>
       <p><strong>Rol:</strong> Desarrollador Full Stack</p>
@@ -94,7 +96,7 @@ function ProjectTruckers() {
         de forma moderna y profesional. El desarrollo modular y orientado a buenas prácticas garantiza la escalabilidad y facilidad de mantenimiento futuro.
       </p>
     </div>
-    </div>
+    </>
   );
 }
 

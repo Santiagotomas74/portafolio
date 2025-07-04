@@ -1,7 +1,6 @@
 .project-detail-container2 {
   max-width: 1000px;
-  margin-top: 30px;
-  margin-left: 150px;
+  margin: 30px auto;
   padding: 40px 30px;
   background-color: #ffffff;
   border-radius: 16px;
@@ -12,7 +11,7 @@
 
 .project-detail-container2 h1 {
   font-size: 2.2rem;
-  margin-top: -80px;
+  margin-top: 0;
   color: #2c3e50;
   text-align: center;
   border-bottom: 2px solid #2980b9;
@@ -49,22 +48,54 @@
   color: #2c3e50;
 }
 
-.back-button-container {
-  position: sticky;
-  top: 40px;
-  margin-left: -160px;
+/* Botón fijo arriba a la izquierda */
+.back-button-container2 {
+  position: fixed;
+  top: 30px;
+  left: 20px;
+  z-index: 9999;
 }
 
-.back-button  {
+.back-button2 {
   color: #00dbfc;
- 
-  background-color:#023e8a;
+  background-color: #023e8a;
   border-radius: 50%;
+  padding: 10px;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease;
 }
 
-.back-button:hover {
+.back-button2:hover {
   transform: scale(1.1);
-  
+}
+
+/* 🔽 Responsividad para pantallas pequeñas */
+@media (max-width: 975px) {
+  .project-detail-container2 {
+    margin: 20px 10px;
+    padding: 25px 20px;
+  }
+
+  .project-detail-container2 h1 {
+    font-size: 1.6rem;
+  }
+
+  .project-detail-container2 h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-detail-container2 p,
+  .project-detail-container2 li {
+    font-size: 0.95rem;
+  }
+
+  .back-button-container2 {
+    top: 20px;
+    left: 10px;
+  }
+
+  .back-button2 {
+    padding: 6px;
+    font-size: 1.2rem;
+  }
 }

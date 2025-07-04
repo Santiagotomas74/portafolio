@@ -50,7 +50,7 @@ function Projectsview() {
             y privadas generadas con OpenSSL. La comunicación usa WebSocket y se gestiona en tiempo real.
             Backend desplegado en Railway, frontend en Vercel.
           </p>
-          <Button variant="contained" color="primary">
+          <Button variant="contained" color="primary" className='project-button'>
             <Link to="/projects/mensajeria-segura" className="project-link" style={{ color: 'inherit', textDecoration: 'none' }}>
                 Ver Detalles
             </Link>
@@ -74,7 +74,7 @@ function Projectsview() {
             Backend con rutas protegidas, validaciones y pasarela de pago integrada. Administra productos,
             usuarios y contactos vía EmailJS.
           </p>
-          <Button variant="contained" color="primary">
+          <Button variant="contained" color="primary" className='project-button'>
             <Link to="/projects/pasteleria-selenita" className="project-link" style={{ color: 'inherit', textDecoration: 'none' }}>
                 Ver Detalles
             </Link>
@@ -97,7 +97,7 @@ function Projectsview() {
             Desde juegos de acción hasta simulaciones académicas: resolución de mochila, rompecabezas,
             algoritmos de grafos (Prim), y prácticas con arquitectura MVP y pruebas unitarias.
           </p>
-          <Button variant="contained" color="primary">
+          <Button variant="contained" color="primary" className='project-button'>
             <Link to="/projects/java" className="project-link" style={{ color: 'inherit', textDecoration: 'none' }}>
                 Ver Detalles
             </Link>

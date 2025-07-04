@@ -20,7 +20,7 @@ function ProjectMensajeria() {
       </div>
     <div className="project-detail-container">
       
-      <h1>Aplicación de Mensajería Segura en Tiempo Real</h1>
+      <h1>Mensajería Segura en Tiempo Real</h1>
       <p><strong>Rol:</strong> Desarrollador Full Stack</p>
        <p><strong>Sitio web:</strong> <a href="https://tp-final-sor2.vercel.app" target="_blank" rel="noopener noreferrer">Secure Message Hub</a></p>
       <p><strong>Proyecto académico final - Materia:</strong> Sistemas Operativos en Red II (SOR2)</p>

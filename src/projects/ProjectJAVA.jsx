@@ -7,17 +7,18 @@ import { useNavigate } from 'react-router-dom';
 function ProjectJava() {
   const navigate = useNavigate();
   return (
-    <div>
-     
-    <div className="project-detail-container2">
-     <div className="back-button-container">
+    <>
+      {/* Botón fijo en la esquina superior izquierda */}
+      <div className="back-button-container2">
         <Tooltip title="Volver">
-          <IconButton onClick={() => navigate("/projects")} >
-            <ArrowBackIcon fontSize="large" className="back-button" />
+          <IconButton onClick={() => navigate("/projects")}>
+            <ArrowBackIcon fontSize="large" className="back-button2" />
           </IconButton>
         </Tooltip>
       </div>
 
+      {/* Contenido del proyecto */}
+      <div className="project-detail-container2">
       <h1>Proyectos Destacados en Java, Python y Assembler</h1>
       
       <p><strong>Rol:</strong> Desarrollador en entornos de escritorio, algorítmicos y sistemas</p>
@@ -93,7 +94,7 @@ function ProjectJava() {
         en estructuras de datos, testing, arquitectura modular y lógica aplicada.
       </p>
     </div>
-    </div>
+    </>
   );
 }
 

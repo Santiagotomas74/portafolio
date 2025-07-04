@@ -27,7 +27,7 @@ body {
 
 /* Contenedor interno con fondo y sombra normal */
 .home-container {
-   margin-left: 100px;
+  margin-left: 100px;
   max-width: 1000px;
   margin-top: 40px;
   border-radius: 12px;
@@ -91,4 +91,57 @@ body {
 
 .home-links svg {
   margin-right: 8px;
+}
+.logo {
+  display: none; /* Ocultar el logo por defecto */
+}
+/* === RESPONSIVE: Celulares y tablets pequeñas === */
+@media (max-width: 975px) {
+  .home-container {
+    margin-left: -25px;
+    margin-top: 10px;
+    padding: 0 16px;
+  }
+
+  .home-content {
+    padding: 24px;
+  }
+
+  .home-content h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .home-content h2 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .home-content p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .home-links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .home-links a,
+  .home-links button {
+    justify-content: center;
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .home-links svg {
+    margin-right: 6px;
+  }
+ .logo {
+    display: block; /* Mostrar el logo en pantallas pequeñas */
+    position: fixed;
+   
+  }
 }
