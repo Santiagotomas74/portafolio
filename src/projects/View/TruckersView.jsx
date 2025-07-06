@@ -1,6 +1,5 @@
 import React from "react";
 import ProjectTruckers from "../ProjectTruckers";
-import Sidebar from "../../home/components/SideBar";
 import { motion } from "framer-motion";
 
 const ViewHome= () => {

@@ -1,6 +1,5 @@
 import React from "react";
 import ProjectJava from "../ProjectJAVA";
-import Sidebar from "../../home/components/Sidebar";
 import { motion } from "framer-motion";
 
 const ViewHome= () => {

@@ -1,6 +1,5 @@
 import React from "react";
 import ProjectSelenita from "../ProjectSelenita";
-import Sidebar from "../../home/components/Sidebar";
 import { motion } from "framer-motion";
 
 const ViewHome= () => {

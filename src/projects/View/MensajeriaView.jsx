@@ -1,6 +1,5 @@
-import React from "react";
+
 import ProjectMensajeria from "../ProjectMensajeria";
-import Sidebar from "../../home/components/Sidebar";
 import { motion } from "framer-motion";
 
 const ViewHome= () => {
