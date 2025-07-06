@@ -1,6 +1,6 @@
 import React from "react";
 import Aboutview from "../components/About";
-import Sidebar from "../components/SideBar";
+import Sidebar from "../components/sideBar";
 const ViewHome= () => {
   return (
     <>

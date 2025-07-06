@@ -1,6 +1,6 @@
 import React from "react";
 import Contactview from "../components/Contact";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/sideBar";
 import { motion } from "framer-motion";
 const ViewHome= () => {
   return (

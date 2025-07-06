@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "../components/Home";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/sideBar";
 const ViewHome= () => {
   return (
     <>
