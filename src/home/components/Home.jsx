@@ -1,7 +1,9 @@
 import React from 'react';
 import './Home.css'; // Assuming you have a CSS file for styling
 import { motion } from 'framer-motion';
-import { LinkedIn , WhatsApp, Email} from "@mui/icons-material";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import EmailIcon from '@mui/icons-material/Email';
 import { Grid, Typography, Link, IconButton } from "@mui/material";
 import AnimatedLogo from './ReactLogo'; // Import the animated logo component
 
@@ -37,21 +39,21 @@ function Homeview() {
         <div className="home-links">
           <Link href="https://www.linkedin.com/in/santiago-taher-239008317" target="_blank" color="inherit" underline="hover">
             <IconButton color="inherit">
-              <LinkedIn />
+              <LinkedInIcon />
             </IconButton>
             LinkedIn
           </Link>
 
           <Link href={`https://wa.me/${formattedPhoneNumber}`} target="_blank" color="inherit" underline="hover">
             <IconButton color="inherit">
-              <WhatsApp />
+              <WhatsAppIcon />
             </IconButton>
              WhatsApp
           </Link>
 
           <Link href={`mailto:santiago_lucas1@hotmail.com`} target="_blank" color="inherit" underline="hover">
             <IconButton color="inherit">
-              <Email />
+              <EmailIcon />
             </IconButton>
              Email
           </Link>
