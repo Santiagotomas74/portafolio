@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import EmailIcon from '@mui/icons-material/Email';
-import { Grid, Typography, Link, IconButton } from "@mui/material";
+import { Link, IconButton } from "@mui/material";
 import AnimatedLogo from './ReactLogo'; // Import the animated logo component
 
 

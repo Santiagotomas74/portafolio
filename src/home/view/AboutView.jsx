@@ -1,7 +1,7 @@
 import React from "react";
 import Aboutview from "../components/About";
-import Sidebar from "../components/sideBar";
-const ViewHome= () => {
+import Sidebar from "../components/SideBar";
+const ViewAbout= () => {
   return (
     <>
         <Sidebar />
@@ -11,4 +11,4 @@ const ViewHome= () => {
   );
 };
 
-export default ViewHome;
+export default ViewAbout;
