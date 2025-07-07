@@ -90,11 +90,16 @@ function ProjectTruckers() {
         </li>
       </ul>
 
-      <h3>Resultado</h3>
+      <h3>Certificado de Pasantía</h3>
       <p>
-        El proyecto logró consolidar una solución integral y segura para el rubro del transporte, facilitando la conexión entre oferta y demanda laboral 
-        de forma moderna y profesional. El desarrollo modular y orientado a buenas prácticas garantiza la escalabilidad y facilidad de mantenimiento futuro.
+       Este es el certificado otorgado por mi participación en el proyecto Truckers Talent:
       </p>
+      <img
+        src="/certificados/certificado.jpg"
+        alt="Certificado de pasantía Truckers Talent"
+        className="cert-image"
+        />
+
     </div>
     </>
   );
