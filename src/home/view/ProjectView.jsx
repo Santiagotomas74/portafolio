@@ -2,7 +2,8 @@ import React from "react";
 import Projectsview from "../components/Projects";
 import Sidebar from "../components/SideBar";
 import { motion } from "framer-motion";
-const ViewHome= () => {
+
+const ViewProject= () => {
   return (
     <>
      <Sidebar />
@@ -19,4 +20,4 @@ const ViewHome= () => {
   );
 };
 
-export default ViewHome;
+export default ViewProject;

@@ -97,14 +97,18 @@ body {
 }
 /* === RESPONSIVE: Celulares y tablets pequeñas === */
 @media (max-width: 975px) {
+  .home-neon-wrapper {
+    margin: 20px auto;
+    padding: 0 10px;
+  }
+
   .home-container {
-    margin-left: -25px;
-    margin-top: 10px;
-    padding: 0 16px;
+    margin: 0;
+    padding: 0;
   }
 
   .home-content {
-    padding: 24px;
+    padding: 20px;
   }
 
   .home-content h1 {
@@ -139,9 +143,16 @@ body {
   .home-links svg {
     margin-right: 6px;
   }
- .logo {
-    display: block; /* Mostrar el logo en pantallas pequeñas */
+
+  .logo {
+    display: block;
     position: fixed;
-   
+    top: 10px;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 1000;
   }
 }

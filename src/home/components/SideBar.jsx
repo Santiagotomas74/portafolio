@@ -23,6 +23,12 @@ function Sidebar() {
 
       {/* Sidebar */}
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
+        <img
+           src="/photoEdit3.jpg"
+           alt="Foto de perfil"
+           className="sidebar-profile"
+        />
+
         <h2>Santiago Taher</h2>
         <nav>
           <ul>

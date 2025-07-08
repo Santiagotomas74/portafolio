@@ -2,6 +2,7 @@ import React from "react";
 import Contactview from "../components/Contact";
 import Sidebar from "../components/SideBar";
 import { motion } from "framer-motion";
+
 const ViewContact =  () => {
   return (
     <>
