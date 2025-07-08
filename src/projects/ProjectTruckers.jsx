@@ -9,14 +9,18 @@ function ProjectTruckers() {
   const navigate = useNavigate();
   return (
     <>
-      <div className="back-button-container">
+    <div>
+     <div className="back-button-container">
         <Tooltip title="Volver">
-          <IconButton onClick={() => navigate("/projects")} >
-            <ArrowBackIcon fontSize="large" className="back-button" />
-          </IconButton>
+          <IconButton onClick={() => navigate("/projects")}>
+           <ArrowBackIcon fontSize="large" className="back-button" />
+         </IconButton>
         </Tooltip>
       </div>
-      
+      </div>
+
+
+
     <div className="project-detail-container">
        
      
