@@ -1,7 +1,6 @@
 
 /* Botón fijo arriba a la izquierda */
 .back-button-container {
-  
   margin-left: -150px;
   position: fixed;
   z-index: 9999;

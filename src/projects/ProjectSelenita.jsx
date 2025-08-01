@@ -19,7 +19,7 @@ function ProjectSelenita() {
     <div className="project-detail-container">
       
       <h1>Pastelería Selenita – E-commerce Full Stack</h1>
-      <p><strong>Rol:</strong> Desarrollador Frontend y Backend</p>
+      <p><strong>Rol:</strong> Desarrollador Full Stack</p>
       <p><strong>Sitio web:</strong> <a href="https://pasteleria-sele.vercel.app" target="_blank" rel="noopener noreferrer" decoration="none">pasteleria-sele.vercel.app</a></p>
 
       <h3>Descripción general del proyecto</h3>

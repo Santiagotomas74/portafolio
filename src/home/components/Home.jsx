@@ -27,7 +27,7 @@ function Homeview() {
         <div className="logo">
         <AnimatedLogo />
         </div>
-        <h1>Santiago Taher</h1>
+        <h1>Santiago Taher </h1>
         <h2>Desarrollador Full Stack</h2>
         <p>¡Bienvenido a mi portafolio!</p>
         <p>
