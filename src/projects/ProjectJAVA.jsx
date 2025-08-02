@@ -3,98 +3,98 @@ import './Java.css';
 import { IconButton, Tooltip } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
+// Importa el hook de idioma y el archivo de traducciones.
+// Debes asegurarte de que estos archivos existan en tu proyecto.
+import { useLanguage } from '../home/components/context/LanguageContext';
+import translations from './translation/JavaTranslations';
+// Importa el componente LanguageSwitcher para los botones de idioma
+import LanguageSwitcher from '../home/components/LanguageSwitcher';
 
 function ProjectJava() {
   const navigate = useNavigate();
+  // Obtiene el idioma actual y los textos traducidos
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
-    <>
-      {/* Botón fijo en la esquina superior izquierda */}
+    // Usa motion.div para aplicar animaciones de transición
+    <motion.div
+      className="project-detail-wrapper"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.6 }}
+    >
+      {/* Añade el componente para cambiar de idioma */}
+      <LanguageSwitcher />
+
+      {/* Botón fijo para volver a la página de proyectos */}
       <div className="back-button-container2">
-        <Tooltip title="Volver">
+        <Tooltip title={t.back}>
           <IconButton onClick={() => navigate("/projects")}>
             <ArrowBackIcon fontSize="large" className="back-button2" />
           </IconButton>
         </Tooltip>
       </div>
 
-      {/* Contenido del proyecto */}
+      {/* Contenido principal del proyecto */}
       <div className="project-detail-container2">
-      <h1>Proyectos Destacados en Java, Python y Assembler</h1>
-      
-      <p><strong>Rol:</strong> Desarrollador en entornos de escritorio, algorítmicos y sistemas</p>
+        <h1>{t.javaTitle}</h1>
+        
+        <p><strong>{t.role}</strong> {t.javaRole}</p>
 
-      <h3>Simulación de Empresa de Viajes (Java)</h3>
-      <p>
-        Desarrollo de un sistema de escritorio para gestionar una empresa de viajes. Permite administrar paquetes, estadías, excursiones y clientes.
-        Se utilizaron conceptos de <strong>POO</strong> como herencia, abstracción y encapsulamiento, además de algoritmos con complejidad temporal optimizada.
-      </p>
+        <h3>{t.javaTravelSimulationTitle}</h3>
+        <p dangerouslySetInnerHTML={{ __html: t.javaTravelSimulationDescription }} />
 
-      <h3>Juego tipo Rompecabezas con WindowBuilder (Java)</h3>
-      <p>
-        Juego de puzzle implementado con <strong>Java + WindowBuilder</strong>. El usuario debe ordenar piezas en un tablero con un número limitado de movimientos y tiempo.
-        Se utilizó la arquitectura <strong>Forms and Controls</strong> para desacoplar presentación de la lógica.
-      </p>
+        <h3>{t.javaPuzzleGameTitle}</h3>
+        <p dangerouslySetInnerHTML={{ __html: t.javaPuzzleGameDescription }} />
 
-      <h3>Aplicación de Árbol Generador Mínimo con JMapViewer (Java)</h3>
-      <p>
-        Aplicación que muestra puntos geográficos conectados mediante aristas con pesos definidos por el usuario. Implementa el <strong>algoritmo de Prim</strong> y el patrón <strong>MVP</strong> para calcular el recorrido óptimo entre nodos.
-      </p>
+        <h3>{t.javaPrimAlgorithmTitle}</h3>
+        <p dangerouslySetInnerHTML={{ __html: t.javaPrimAlgorithmDescription }} />
 
-      <h3>Problema de la Mochila – Salón de Fiestas (Java)</h3>
-      <p>
-        Simulación de ofertas sobre el uso de un salón de eventos en 24 horas. Utiliza algoritmos de selección para <strong>maximizar ganancias</strong> sin superposición horaria. Desarrollado bajo <strong>MVP</strong>.
-      </p>
+        <h3>{t.javaKnapsackTitle}</h3>
+        <p dangerouslySetInnerHTML={{ __html: t.javaKnapsackDescription }} />
 
-      <h3>Testeo Unitario con JUnit (Java)</h3>
-      <p>
-        Desarrollo de pruebas unitarias con <strong>JUnit</strong> cubriendo métodos, excepciones y escenarios límite. Aplicación de <strong>mock frameworks</strong> y buenas prácticas de testing.
-      </p>
+        <h3>{t.javaJunitTitle}</h3>
+        <p dangerouslySetInnerHTML={{ __html: t.javaJunitDescription }} />
 
-      <hr />
+        <hr />
 
-      <h3>Juego 2D – Java (proyecto grupal)</h3>
-      <p>
-        Juego 2D ambientado en una ciudad invadida por monstruos. El jugador debe eliminar enemigos, esquivar disparos y coches, y enfrentar a un jefe final. Menús de victoria/derrota según el desempeño.
-      </p>
-      <ul>
-        <li>Eliminación de enemigos con proyectiles.</li>
-        <li>Manejo de colisiones y estados del jugador.</li>
-        <li>Diseño de interfaz con menús dinámicos.</li>
-        <li><strong>POO en Java</strong>, manejo de arrays y objetos.</li>
-      </ul>
+        <h3>{t.javaGame2DTitle}</h3>
+        <p>{t.javaGame2DDescription}</p>
+        <ul>
+          <li>{t.javaGame2DPoint1}</li>
+          <li>{t.javaGame2DPoint2}</li>
+          <li>{t.javaGame2DPoint3}</li>
+          <li dangerouslySetInnerHTML={{ __html: t.javaGame2DPoint4 }} />
+        </ul>
 
-      <h3>Proyecto en ARM – Raspberry Pi (Assembler)</h3>
-      <p>
-        Programa que codifica y decodifica mensajes usando el <strong>cifrado César</strong>. Implementado en ensamblador para <strong>ARM v8</strong>, ejecutado sobre Raspberry Pi.
-      </p>
-      <ul>
-        <li>Codificación mediante desplazamiento basado en vector.</li>
-        <li>Decodificación con palabra clave.</li>
-        <li>Conteo de caracteres procesados como resultado.</li>
-        <li>Uso de <strong>registros, subrutinas, pila e interrupciones</strong>.</li>
-        <li>Aplicación de <strong>arquitectura RISC</strong> y operaciones lógicas.</li>
-      </ul>
+        <h3>{t.armProjectTitle}</h3>
+        <p dangerouslySetInnerHTML={{ __html: t.armProjectDescription }} />
+        <ul>
+          <li>{t.armProjectPoint1}</li>
+          <li>{t.armProjectPoint2}</li>
+          <li>{t.armProjectPoint3}</li>
+          <li dangerouslySetInnerHTML={{ __html: t.armProjectPoint4 }} />
+          <li dangerouslySetInnerHTML={{ __html: t.armProjectPoint5 }} />
+        </ul>
 
-      <h3>Juego de Palabras – Python</h3>
-      <p>
-        Juego tipo anagrama donde se presentan palabras mezcladas que deben reordenarse. Se puntúa según longitud y validez semántica.
-      </p>
-      <ul>
-        <li>Palabras de 3 a 7 letras validadas contra diccionario.</li>
-        <li>Sistema de puntaje positivo/negativo.</li>
-        <li>Límite de tiempo para resolver el desafío.</li>
-        <li>Manejo de listas, bucles, funciones, condiciones y retorno de datos.</li>
-        <li>Uso de librerías básicas de Python.</li>
-      </ul>
+        <h3>{t.pythonWordGameTitle}</h3>
+        <p>{t.pythonWordGameDescription}</p>
+        <ul>
+          <li>{t.pythonWordGamePoint1}</li>
+          <li>{t.pythonWordGamePoint2}</li>
+          <li>{t.pythonWordGamePoint3}</li>
+          <li>{t.pythonWordGamePoint4}</li>
+          <li>{t.pythonWordGamePoint5}</li>
+        </ul>
 
-      <h3>Resultado General</h3>
-      <p>
-        Este conjunto de proyectos me permitió desarrollar experiencia en distintos paradigmas: desde interfaces gráficas complejas en Java,
-        pasando por juegos lógicos y proyectos algorítmicos, hasta desarrollo en bajo nivel con assembler y Raspberry Pi. También reforzó mis habilidades 
-        en estructuras de datos, testing, arquitectura modular y lógica aplicada.
-      </p>
-    </div>
-    </>
+        <h3>{t.javaGeneralResultTitle}</h3>
+        <p>{t.javaGeneralResultDescription}</p>
+      </div>
+    </motion.div>
   );
 }
 

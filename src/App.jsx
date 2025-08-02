@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { LanguageProvider } from './home/components/context/LanguageContext'
 import Home from './home/view/Homeview'
 import About from './home/view/AboutView'
 import Projects from './home/view/ProjectView'
@@ -9,11 +10,12 @@ import ProjectSelenita from './projects/View/PasteleriaView'
 import ProjectJava from './projects/ProjectJAVA'
 import ScrollToTop from './projects/ScrollToTop';
 
+
 function App() {
   return (
+    <LanguageProvider>
     <Router>
       <ScrollToTop />
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
@@ -25,8 +27,10 @@ function App() {
         <Route path="/projects/mensajeria-segura" element={<ProjectMensajeria />} />
         <Route path="/projects/pasteleria-selenita" element={<ProjectSelenita />} />
         <Route path="/projects/java" element={<ProjectJava />} />
+        
       </Routes>
     </Router>
+    </LanguageProvider>
   )
 }
 

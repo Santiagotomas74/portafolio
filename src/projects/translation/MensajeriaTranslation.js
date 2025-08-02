@@ -1,0 +1,73 @@
+const translations = {
+  es: {
+    // Textos de ProjectMensajeria
+    secureMessagingTitle: "Mensajería Segura en Tiempo Real",
+    secureMessagingRole: "Desarrollador Full Stack",
+    website: "Sitio web:",
+    secureMessagingLink: "https://tp-final-sor2.vercel.app",
+    finalProject: "Proyecto académico final - Materia:",
+    finalProjectSubtitle: "Sistemas Operativos en Red II (SOR2)",
+    secureMessagingDescription: "Este proyecto consistió en el diseño e implementación de una aplicación web full-stack para mensajería segura en tiempo real. Se aplicaron tecnologías modernas de desarrollo web y se incorporaron protocolos robustos de cifrado para garantizar la confidencialidad y la integridad de los mensajes intercambiados.",
+    secureMessagingFrontendTitle: "Frontend (React.js + Material UI)",
+    secureMessagingFrontendPoint1: "Desarrollo de una interfaz de usuario responsiva, clara y moderna utilizando <strong>React.js</strong> y <strong>Material UI</strong>.",
+    secureMessagingFrontendPoint2: "Funcionalidades clave como <strong>registro, inicio de sesión, lista de usuarios activos y chat en vivo</strong> con diseño adaptado a distintos dispositivos.",
+    secureMessagingFrontendPoint3: "Validaciones de formularios y gestión de sesiones en el cliente, mejorando la experiencia de usuario.",
+    secureMessagingBackendTitle: "Backend (Node.js + Express + Socket.IO)",
+    secureMessagingBackendPoint1: "Construcción de un servidor con <strong>Node.js</strong> y <strong>Express</strong>, encargado de manejar la lógica de negocio, autenticación, sesiones y conexiones WebSocket.",
+    secureMessagingBackendPoint2: "Implementación de <strong>JWT (JSON Web Token)</strong> para autenticación segura y persistente.",
+    secureMessagingBackendPoint3: "Integración de <strong>Socket.IO</strong> para establecer un canal de comunicación bidireccional en tiempo real entre los usuarios.",
+    secureMessagingBackendPoint4: "Separación clara entre capas: rutas, controladores, servicios y middleware.",
+    secureMessagingDatabaseTitle: "Base de Datos (PostgreSQL)",
+    secureMessagingDatabasePoint1: "Persistencia de usuarios y mensajes en una base de datos relacional con <strong>PostgreSQL</strong>.",
+    secureMessagingDatabasePoint2: "Estructura normalizada y uso de claves foráneas para mantener integridad referencial entre usuarios y sus conversaciones.",
+    secureMessagingDatabasePoint3: "Consultas seguras y optimizadas, evitando redundancia y mejorando la performance.",
+    securityCryptoTitle: "Seguridad y Criptografía",
+    secureMessagingSecurityPoint1: "Se implementó <strong>cifrado de extremo a extremo</strong> con <strong>criptografía asimétrica RSA</strong>, generando claves públicas y privadas con OpenSSL.",
+    secureMessagingSecurityPoint2: "Cada mensaje enviado se cifraba con la clave pública del receptor y solo podía ser descifrado con su clave privada, asegurando total confidencialidad.",
+    secureMessagingSecurityPoint3: "Validación de identidad mediante firma de tokens y mecanismos de protección de rutas.",
+    deploymentTitle: "Despliegue en la nube",
+    secureMessagingDeploymentPoint1: "El backend fue desplegado en <strong>Railway</strong> (servidor + base de datos), y el frontend en <strong>Vercel</strong>, permitiendo acceso universal desde cualquier navegador.",
+    secureMessagingDeploymentPoint2: "Configuración de variables de entorno y manejo de dominios para producción.",
+    secureMessagingResultTitle: "Resultado",
+    secureMessagingResultDescription: "Esta aplicación demuestra la integración efectiva de comunicación en tiempo real con seguridad avanzada, una interfaz amigable y una arquitectura sólida. El proyecto fue clave para profundizar mis conocimientos en redes, criptografía aplicada y desarrollo web full stack orientado a la seguridad.",
+    
+   
+  },
+  en: {
+    
+    // ProjectMensajeria texts
+    secureMessagingTitle: "Real-time Secure Messaging",
+    secureMessagingRole: "Full Stack Developer",
+    website: "Website:",
+    secureMessagingLink: "https://tp-final-sor2.vercel.app",
+    finalProject: "Final Academic Project - Subject:",
+    finalProjectSubtitle: "Network Operating Systems II (SOR2)",
+    secureMessagingDescription: "This project involved the design and implementation of a full-stack web application for secure, real-time messaging. Modern web development technologies were applied, and robust encryption protocols were incorporated to ensure the confidentiality and integrity of exchanged messages.",
+    secureMessagingFrontendTitle: "Frontend (React.js + Material UI)",
+    secureMessagingFrontendPoint1: "Development of a responsive, clear, and modern user interface using <strong>React.js</strong> and <strong>Material UI</strong>.",
+    secureMessagingFrontendPoint2: "Key functionalities such as <strong>registration, login, active user list, and live chat</strong> with a design adapted for different devices.",
+    secureMessagingFrontendPoint3: "Form validations and client-side session management to improve the user experience.",
+    secureMessagingBackendTitle: "Backend (Node.js + Express + Socket.IO)",
+    secureMessagingBackendPoint1: "Construction of a server with <strong>Node.js</strong> and <strong>Express</strong>, responsible for handling business logic, authentication, sessions, and WebSocket connections.",
+    secureMessagingBackendPoint2: "Implementation of <strong>JWT (JSON Web Token)</strong> for secure and persistent authentication.",
+    secureMessagingBackendPoint3: "Integration of <strong>Socket.IO</strong> to establish a real-time bidirectional communication channel between users.",
+    secureMessagingBackendPoint4: "Clear separation of layers: routes, controllers, services, and middleware.",
+    secureMessagingDatabaseTitle: "Database (PostgreSQL)",
+    secureMessagingDatabasePoint1: "Persistence of users and messages in a relational database with <strong>PostgreSQL</strong>.",
+    secureMessagingDatabasePoint2: "Normalized structure and use of foreign keys to maintain referential integrity between users and their conversations.",
+    secureMessagingDatabasePoint3: "Secure and optimized queries, avoiding redundancy and improving performance.",
+    securityCryptoTitle: "Security and Cryptography",
+    secureMessagingSecurityPoint1: "End-to-end encryption was implemented with <strong>asymmetric RSA cryptography</strong>, generating public and private keys with OpenSSL.",
+    secureMessagingSecurityPoint2: "Each sent message was encrypted with the recipient's public key and could only be decrypted with their private key, ensuring total confidentiality.",
+    secureMessagingSecurityPoint3: "Identity validation through token signing and route protection mechanisms.",
+    deploymentTitle: "Cloud Deployment",
+    secureMessagingDeploymentPoint1: "The backend was deployed on <strong>Railway</strong> (server + database), and the frontend on <strong>Vercel</strong>, allowing universal access from any browser.",
+    secureMessagingDeploymentPoint2: "Configuration of environment variables and domain management for production.",
+    secureMessagingResultTitle: "Result",
+    secureMessagingResultDescription: "This application demonstrates the effective integration of real-time communication with advanced security, a user-friendly interface, and a solid architecture. The project was key to deepening my knowledge in networking, applied cryptography, and security-oriented full-stack web development.",
+    
+    
+  },
+};
+
+export default translations;
