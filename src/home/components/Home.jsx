@@ -8,7 +8,7 @@ import { Link, IconButton } from "@mui/material"; // Elimina la importación de 
 import AnimatedLogo from './ReactLogo';
 
 import { useLanguage } from './context/LanguageContext';
-import translations from './translations/translations';
+import translations from './translations/HomeTranslations';
 
 // Importa el nuevo componente LanguageSwitcher
 import LanguageSwitcher from './LanguageSwitcher'; // Asegúrate de que la ruta sea correcta
