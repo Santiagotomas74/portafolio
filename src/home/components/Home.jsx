@@ -40,8 +40,10 @@ function Homeview() {
           <h1>{t.name}</h1>
           <h2>{t.title}</h2>
           <p>{t.welcome}</p>
+          <div dangerouslySetInnerHTML={{ __html: t.text }} />
           <p>{t.aboutMeParagraph1}</p>
           <p>{t.aboutMeParagraph2}</p>
+          
           <div className="home-links">
             <Link href="https://www.linkedin.com/in/santiago-taher-239008317" target="_blank" color="inherit" underline="hover">
               <IconButton color="inherit">
