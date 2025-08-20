@@ -61,6 +61,10 @@
   display: block;
   border: 3px solid #00dbfc; /* Borde opcional decorativo */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  /* Estilos para el efecto parallax */
+  transform-style: preserve-3d; /* Necesario para transformaciones 3D */
+  transition: transform 0.1s ease-out; /* Hace que el movimiento sea suave */
+  will-change: transform; /* Sugerencia al navegador para optimizar la animación */
 }
 
 /* Estilo botón hamburguesa */

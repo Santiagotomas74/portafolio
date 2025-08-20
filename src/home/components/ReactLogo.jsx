@@ -5,7 +5,7 @@ const AnimatedLogo = () => {
     <motion.img
       src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
       alt="React Logo"
-      style={{ width: '50px', height: '50px', right: '40px', top: '35px', position: 'fixed', zIndex: 1000000 }}
+      style={{ width: '50px', height: '50px', zIndex: 1000000 }}
       animate={{ rotate: 360 }}
       transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
     />

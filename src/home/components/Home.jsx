@@ -5,12 +5,13 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import EmailIcon from '@mui/icons-material/Email';
 import { Link, IconButton } from "@mui/material"; 
-import AnimatedLogo from './ReactLogo';
+
 
 import { useLanguage } from './context/LanguageContext';
 import translations from './translations/HomeTranslations';
 
 import LanguageSwitcher from './LanguageSwitcher'; 
+import TechStack from "../components/TechStack";
 
 function Homeview() {
   const { language } = useLanguage(); 
@@ -77,7 +78,7 @@ function Homeview() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
       >
         <div className="home-container">
           <div
@@ -88,9 +89,7 @@ function Homeview() {
               transition: 'transform 0.2s ease', // transición suave permanente
             }}
           >
-            <div className="logo">
-              <AnimatedLogo />
-            </div>
+            
             <h1>{t.name}</h1>
             <h2>{t.title}</h2>
             <p>{t.welcome}</p>
@@ -124,6 +123,7 @@ function Homeview() {
         </div>
       </motion.div>
       <LanguageSwitcher />
+   
     </>
   );
 }

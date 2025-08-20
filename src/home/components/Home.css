@@ -122,15 +122,22 @@ body {
   .home-neon-wrapper {
     margin: 20px auto;
     padding: 0 10px;
+    box-shadow: none; /* Elimina la sombra para móviles */
   }
 
   .home-container {
     margin: 0;
     padding: 0;
+    border: transparent;
+    box-shadow: transparent;
+  
   }
+  
 
   .home-content {
     padding: 20px;
+    border: none;
+    box-shadow: none;
   }
 
   .home-content h1 {

@@ -1,0 +1,140 @@
+/* ===================== */
+/* Sección y grilla      */
+/* ===================== */
+.techstack-section {
+  padding: 40px 20px;
+  margin-left: 15rem;
+  background-color: #0d1b2a;
+  color: #fff;
+  text-align: center;
+}
+
+.techstack-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #00dbfc;
+}
+
+.techstack-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ===================== */
+/* Card (sin glow)       */
+/* ===================== */
+.tech-card {
+  width: 170px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 200; /* Para superponerse al sidebar */
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.tech-card:hover {
+  transform: scale(1.05);
+}
+
+
+.tech-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.tech-card p {
+  margin: 0 0 10px 0;
+  font-weight: 500;
+}
+
+/* ===================== */
+/* Barra con “fuego”     */
+/* ===================== */
+.tech-bar {
+  width: 100%;
+  height: 12px;
+  background: #424141;
+  border-radius: 6px;
+  position: relative;
+  margin-top: 6px;
+  overflow: visible; /* ¡importante! no recorta el glow */
+}
+
+.tech-bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #6ee9fc, #4e7aa1, #71ecff, #5d88aa);
+  background-size: 300% 100%;
+  /* el width lo controlás desde React con style={{ width: `${tech.level}%` }} */
+  will-change: background-position, box-shadow, transform;
+  transform-origin: center;
+
+  /* Animaciones: flujo + pulso del resplandor */
+  animation:
+    fireMove 2.2s linear infinite,
+    pulseGlow 1.4s ease-in-out infinite;
+
+  /* Glow principal */
+  box-shadow:
+    0 0 10px rgba(3, 255, 255, 0.7),
+    0 0 20px rgba(13, 27, 151, 0.5);
+}
+
+/* movimiento del “fuego” en el gradiente */
+@keyframes fireMove {
+  0%   { background-position:   0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position:   0% 50%; }
+}
+
+/* pulso del resplandor + leve vibración vertical */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow:
+      0 0 10px rgba(3, 255, 255, 0.7),
+      0 0 20px rgba(1, 12, 116, 0.5);
+    transform: scaleY(1);
+  }
+  50% {
+    box-shadow:
+      0 0 18px rgba(3, 255, 255, 0.7),
+      0 0 36px rgba(1, 12, 116, 0.5);
+    transform: scaleY(1.2);
+  }
+}
+/* Responsivo */
+@media (max-width: 975px) {
+  .techstack-grid {
+    gap: 15px;
+  }
+  .techstack-section {
+ 
+  margin-left:0;
+  
+}
+
+  .tech-card {
+    width: 120px;
+    padding: 12px;
+  }
+
+  .tech-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .techstack-title {
+    font-size: 1.8rem;
+  }
+}
+
