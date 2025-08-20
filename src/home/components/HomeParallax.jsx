@@ -8,7 +8,10 @@ function HomeContentWithParallax({ children }) {
   useEffect(() => {
     const contentElement = contentRef.current;
     if (!contentElement) return;
+    
+    if (window.innerWidth <= 768) return;
 
+    
     let animationFrameId = null;
     const margin = 10; // tolerancia en píxeles
 

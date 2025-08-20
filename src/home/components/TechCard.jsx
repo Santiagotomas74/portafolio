@@ -42,7 +42,7 @@ const TechCard = ({ logo, name, level }) => {
         style={{ width: `${level}%` }}
       ></div>
     </div>
-    <p>{level}%</p>
+    <p className="porcent">{level}%</p>
   </div>
 );
 

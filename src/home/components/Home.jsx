@@ -5,13 +5,12 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import EmailIcon from '@mui/icons-material/Email';
 import { Link, IconButton } from "@mui/material"; 
-
+import Sidebar from "../components/SideBar";
 
 import { useLanguage } from './context/LanguageContext';
 import translations from './translations/HomeTranslations';
 
 import LanguageSwitcher from './LanguageSwitcher'; 
-import TechStack from "../components/TechStack";
 
 function Homeview() {
   const { language } = useLanguage(); 
@@ -27,8 +26,11 @@ function Homeview() {
     const contentElement = contentRef.current;
     if (!contentElement) return;
 
+    // 🚫 Desactivar parallax en móviles (ej: <= 768px)
+    if (window.innerWidth <= 768) return;
+
     let animationFrameId = null;
-    const margin = 10; // tolerancia en píxeles
+    const margin = 10; 
 
     const handleMouseMove = (e) => {
       if (animationFrameId) cancelAnimationFrame(animationFrameId);
@@ -80,16 +82,19 @@ function Homeview() {
         exit={{ opacity: 0, y: -20 }}
         transition={{ duration: 1, ease: "easeInOut" }}
       >
+        
         <div className="home-container">
           <div
             ref={contentRef}
             className="home-content"
             style={{
-              transform: `rotateX(${transformValues.rotateX}deg) rotateY(${transformValues.rotateY}deg) translateZ(${transformValues.translateZ}px)`,
-              transition: 'transform 0.2s ease', // transición suave permanente
+              // En móvil NO aplicamos transform
+              transform: window.innerWidth <= 768 
+                ? "none" 
+                : `rotateX(${transformValues.rotateX}deg) rotateY(${transformValues.rotateY}deg) translateZ(${transformValues.translateZ}px)`,
+              transition: 'transform 0.2s ease',
             }}
           >
-            
             <h1>{t.name}</h1>
             <h2>{t.title}</h2>
             <p>{t.welcome}</p>
@@ -123,7 +128,6 @@ function Homeview() {
         </div>
       </motion.div>
       <LanguageSwitcher />
-   
     </>
   );
 }

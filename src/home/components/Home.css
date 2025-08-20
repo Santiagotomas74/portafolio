@@ -22,38 +22,29 @@ body {
 }
 
 .home-container {
-  margin-left: 100px;
-  max-width: 950px;
-  margin-top: 40px;
- 
- 
-
-  perspective: 1000px; /* Perspectiva para el efecto 3D en el home-content */
-  
-  
+  width: 87%;              /* Ocupa todo el ancho */
+  perspective: 1000px;      /* Mantener efecto 3D */
+  display: flex;
+  justify-content: flex-end; /* Empuja el contenido al extremo derecho */
+  padding-top: 20px;
+  padding-right: 0;          /* Sin espacio a la derecha */
+  padding-left: 120px; /* deja espacio para la sidebar */
 }
-
-.home-content-parallax {
-  position: relative;
-  padding: 40px;
-  background-color: #0d1b2a; /* Fondo del contenido */
-  border-radius: 12px;
-
-}
-
 
 .home-content {
-  background-color: #031c30; /* Fondo del contenido */
+  background-color: var(--clr-bg);
   border-radius: 12px;
   padding: 40px;
-  /* Efecto de sombra neón para el contenido interno (se mantiene) */
-  box-shadow: 0 0 25px rgba(0, 219, 252, 0.5); 
-  border: 2px solid var(--clr-neon); /* Borde neón */
-  /* Transición para el movimiento de inclinación y elevación (controlados por JS) */
+  box-shadow: 0 0 25px rgba(0, 219, 252, 0.5);
+  border: 2px solid var(--clr-neon);
   transition: transform 0.2s ease;
-  /* Necesario para que las transformaciones 3D de los hijos se rendericen correctamente */
-  transform-style: preserve-3d; 
+  transform-style: preserve-3d;
+
+  width: fit-content;       /* Ajusta el ancho al contenido */
+  margin-left: auto;        /* Empuja hacia la derecha */
+  margin-right: 0;          /* Sin margen derecho */
 }
+
 
 
 /* Resto igual */
@@ -123,21 +114,23 @@ body {
     margin: 20px auto;
     padding: 0 10px;
     box-shadow: none; /* Elimina la sombra para móviles */
+    transform: none;  /* Quitar transformaciones */
   }
 
   .home-container {
-    margin: 0;
+    margin-left: 3%;
     padding: 0;
     border: transparent;
     box-shadow: transparent;
-  
+    perspective: none; /* ❌ sin perspectiva en móviles */
   }
-  
 
   .home-content {
     padding: 20px;
     border: none;
     box-shadow: none;
+    transform: none;          /* ❌ desactiva inclinaciones */
+    transform-style: flat;    /* ❌ sin 3D */
   }
 
   .home-content h1 {
@@ -185,3 +178,5 @@ body {
     z-index: 1000;
   }
 }
+
+

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import { motion } from 'framer-motion';
 // Rutas corregidas: Asume que estos archivos están un nivel arriba o en una carpeta común como 'styles', 'assets', etc.
 import './SideBar.css';
 import AnimatedReactLogo from './logo'; // Asegúrate de que esta ruta sea correcta (ej: ../components/logo si logo.jsx está en 'components')
@@ -67,6 +68,13 @@ function Sidebar() {
 
   return (
     <>
+    <motion.div
+  className="projects-container"
+  initial={{ opacity: 0, x: -800 }}   // sale desde la izquierda
+  animate={{ opacity: 1, x: -200 }}      // posición final
+  exit={{ opacity: 0, x: -100 }}      // sale hacia la izquierda al cerrar
+  transition={{ duration: 0.8, ease: "easeInOut" }}
+>
       {/* Botón hamburguesa */}
       <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? <CloseIcon /> : <MenuIcon />}
@@ -74,14 +82,14 @@ function Sidebar() {
 
       {/* Sidebar */}
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-        <img
-            ref={profileImageRef} // Asigna la referencia a la imagen
-            src="/photoEdit3.jpg" // Asegúrate de que esta ruta de imagen sea accesible desde la raíz pública
+      <div className="profile-wrapper">
+         <img
+            ref={profileImageRef}
+            src="/photoEdit3.jpg"
             alt="Foto de perfil"
             className="sidebar-profile"
-            // Aplica la transformación CSS dinámica
-            style={{ transform: `translateX(${imageTransform.x}px) translateY(${imageTransform.y}px)` }}
-        />
+          />
+      </div>
 
         <h2>{t.name}</h2>
         <nav>
@@ -100,8 +108,9 @@ function Sidebar() {
             </li>
           </ul>
         </nav>
-        <AnimatedReactLogo />
+      
       </div>
+      </motion.div>
     </>
   );
 }

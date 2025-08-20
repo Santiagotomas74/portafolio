@@ -53,19 +53,75 @@
   box-shadow: 0 0 8px rgba(72, 202, 228, 0.5);
 }
 
-.sidebar-profile {
-  width: 170px;
-  height: 170px;
-  object-fit: cover;
-  border-radius: 50%; /* Borde redondo */
-  display: block;
-  border: 3px solid #00dbfc; /* Borde opcional decorativo */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  /* Estilos para el efecto parallax */
-  transform-style: preserve-3d; /* Necesario para transformaciones 3D */
-  transition: transform 0.1s ease-out; /* Hace que el movimiento sea suave */
-  will-change: transform; /* Sugerencia al navegador para optimizar la animación */
+/* Contenedor de la imagen */
+.profile-wrapper {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+/* Glow giratorio permanente */
+.profile-wrapper::before {
+  content: '';
+  display: block; /* obligatorio */
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  border-radius: 50%;
+  background: conic-gradient(
+    transparent 0%, 
+    transparent 10%, 
+    #00dbfc 50%, 
+    transparent 90%, 
+    transparent 100%
+  );
+  animation: rotateGlow 3s linear infinite;
+  transform-origin: center; /* hace que gire desde el centro */
+  z-index: 0;
+  opacity: 0.8;
+  filter: blur(8px); /* suaviza el borde */
+}
+
+
+/* Imagen */
+.sidebar-profile {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 219, 252, 0.7);
+  position: relative;
+  z-index: 1; /* encima del glow */
+}
+
+/* Animación de rotación */
+@keyframes rotateGlow {
+  0%   { transform: rotate(0deg);   opacity: 0.7; }
+  25%  { transform: rotate(90deg);  opacity: 1;   }
+  50%  { transform: rotate(180deg); opacity: 0.8; }
+  75%  { transform: rotate(270deg); opacity: 1;   }
+  100% { transform: rotate(360deg); opacity: 0.7; }
+}
+
+/* Responsivo */
+@media (max-width: 975px) {
+  .profile-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
+
+
+
 
 /* Estilo botón hamburguesa */
 .hamburger {
