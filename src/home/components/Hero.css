@@ -1,0 +1,44 @@
+
+.hero-container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f0f0f;
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(34, 156, 255, 0.4), rgba(0, 0, 0, 0.9));
+  box-shadow: 0 0 40px rgba(0, 38, 255, 0.5), 0 0 100px rgba(13, 32, 141, 0.3);
+}
+
+.hero-text {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  margin: 0%;
+  margin-top: 100px;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.hero-text h2 span {
+  color: #00ffaa;
+}
+
+.hero-text h2 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-top: 10px;
+  opacity: 0.9;
+}

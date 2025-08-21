@@ -4,16 +4,17 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { motion } from 'framer-motion';
 // Rutas corregidas: Asume que estos archivos están un nivel arriba o en una carpeta común como 'styles', 'assets', etc.
-import './SideBar.css';
-import AnimatedReactLogo from './logo'; // Asegúrate de que esta ruta sea correcta (ej: ../components/logo si logo.jsx está en 'components')
+import './SideBar.css'; // Ruta ajustada
 
-// Rutas corregidas: Asume que 'context' y 'translations' están en el mismo nivel que el componente que usa la Sidebar
-import { useLanguage } from './context/LanguageContext'; 
-import translations from './translations/SideBarTranslations'; 
+
+// Rutas corregidas: Asume que 'context' y 'translations' están en un nivel superior
+import { useLanguage } from './context/LanguageContext'; // Ruta ajustada
+import translations from './translations/SideBarTranslations'; // Ruta ajustada
 
 function Sidebar() {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  
   
   // Obtiene el idioma actual y los textos traducidos
   const { language } = useLanguage();
@@ -35,16 +36,19 @@ function Sidebar() {
     if (!imageElement) return;
 
     const handleMouseMove = (e) => {
-      const { left, top, width, height } = imageElement.getBoundingClientRect();
+      // Usamos el `profile-wrapper` para el `getBoundingClientRect` para el cálculo relativo
+      const wrapperElement = imageElement.closest('.profile-wrapper'); 
+      if (!wrapperElement) return; // Asegurarse de que el wrapper existe
+
+      const { left, top, width, height } = wrapperElement.getBoundingClientRect();
       const centerX = left + width / 2;
       const centerY = top + height / 2;
 
-      // Posición del mouse relativa al centro de la imagen
+      // Posición del mouse relativa al centro del wrapper
       const mouseX = e.clientX - centerX;
       const mouseY = e.clientY - centerY;
 
       // Calcular la cantidad de movimiento (ajusta el factor para mayor o menor efecto)
-      // Dividimos por un valor para suavizar el movimiento
       const moveX = mouseX * -0.05; // Mueve en dirección opuesta (efecto parallax)
       const moveY = mouseY * -0.05; // Mueve en dirección opuesta
 
@@ -56,24 +60,30 @@ function Sidebar() {
       setImageTransform({ x: 0, y: 0 });
     };
 
-    imageElement.addEventListener('mousemove', handleMouseMove);
-    imageElement.addEventListener('mouseleave', handleMouseLeave);
+    // Los event listeners se añaden al 'profile-wrapper' para capturar el movimiento sobre toda la zona
+    const wrapperElement = profileImageRef.current?.closest('.profile-wrapper');
+    if (wrapperElement) {
+        wrapperElement.addEventListener('mousemove', handleMouseMove);
+        wrapperElement.addEventListener('mouseleave', handleMouseLeave);
+    }
 
     return () => {
       // Limpia los event listeners al desmontar el componente
-      imageElement.removeEventListener('mousemove', handleMouseMove);
-      imageElement.removeEventListener('mouseleave', handleMouseLeave);
+      if (wrapperElement) {
+        wrapperElement.removeEventListener('mousemove', handleMouseMove);
+        wrapperElement.removeEventListener('mouseleave', handleMouseLeave);
+      }
     };
   }, []); // Se ejecuta una vez al montar el componente
 
   return (
     <>
     <motion.div
-  className="projects-container"
-  initial={{ opacity: 0, x: -800 }}   // sale desde la izquierda
-  animate={{ opacity: 1, x: -200 }}      // posición final
-  exit={{ opacity: 0, x: -100 }}      // sale hacia la izquierda al cerrar
-  transition={{ duration: 0.8, ease: "easeInOut" }}
+     className="projects-container"
+ initial={{ opacity: 0, x: -800 }} // sale desde la izquierda
+ animate={{ opacity: 1, x: -200 }} // posición final
+  exit={{ opacity: 0, x: -100 }} // sale hacia la izquierda al cerrar
+ transition={{ duration: 0.8, ease: "easeInOut" }}
 >
       {/* Botón hamburguesa */}
       <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
@@ -82,14 +92,17 @@ function Sidebar() {
 
       {/* Sidebar */}
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-      <div className="profile-wrapper">
-         <img
-            ref={profileImageRef}
-            src="/photoEdit3.jpg"
-            alt="Foto de perfil"
-            className="sidebar-profile"
-          />
-      </div>
+        {/* Nuevo contenedor para el efecto giratorio */}
+        <div className="profile-wrapper">
+            <img
+                ref={profileImageRef} // Asigna la referencia a la imagen
+                src="/photoEdit3.jpg" // Asegúrate de que esta ruta de imagen sea accesible desde la raíz pública
+                alt="Foto de perfil"
+                className="sidebar-profile"
+                // Aplica la transformación CSS dinámica del parallax
+                style={{ transform: `translateX(${imageTransform.x}px) translateY(${imageTransform.y}px)` }}
+            />
+        </div>
 
         <h2>{t.name}</h2>
         <nav>
@@ -108,9 +121,9 @@ function Sidebar() {
             </li>
           </ul>
         </nav>
-      
+        
       </div>
-      </motion.div>
+    </motion.div>
     </>
   );
 }

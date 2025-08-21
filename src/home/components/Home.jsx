@@ -5,7 +5,10 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import EmailIcon from '@mui/icons-material/Email';
 import { Link, IconButton } from "@mui/material"; 
-import Sidebar from "../components/SideBar";
+import HeroSphere from './HeroSphere';
+import {Canvas } from '@react-three/fiber';
+
+
 
 import { useLanguage } from './context/LanguageContext';
 import translations from './translations/HomeTranslations';
@@ -75,6 +78,8 @@ function Homeview() {
 
   return (
     <> 
+     
+
       <motion.div
         className="projects-container" 
         initial={{ opacity: 0, y: 20 }}

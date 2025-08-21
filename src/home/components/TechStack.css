@@ -4,7 +4,7 @@
 .techstack-section {
   padding: 40px 20px;
   margin-left: 15rem;
-  background-color: #0d1b2a;
+  background-color: #0f0f0f;
   color: #fff;
   text-align: center;
 }
@@ -27,7 +27,7 @@
 /* ===================== */
 .tech-card {
   width: 170px;
-  background: rgba(255, 255, 255, 0.05);
+  background: #0f0f0f;
   padding: 15px;
   border-radius: 12px;
   text-align: center;
@@ -37,7 +37,7 @@
   z-index: 200; /* Para superponerse al sidebar */
   overflow: hidden;
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.1);
+  
 }
 
 .tech-card:hover {
@@ -57,9 +57,7 @@
   font-weight: 500;
 }
 
-/* ===================== */
-/* Barra con “fuego”     */
-/* ===================== */
+
 .tech-bar {
   width: 100%;
   height: 12px;

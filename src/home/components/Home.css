@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0d1b2a;
+  background-color: #0f0f0f;
   color: #ffff;
 }
 :root {
@@ -32,7 +32,7 @@ body {
 }
 
 .home-content {
-  background-color: var(--clr-bg);
+  background-color: #0f0f0f;
   border-radius: 12px;
   padding: 40px;
   box-shadow: 0 0 25px rgba(0, 219, 252, 0.5);
