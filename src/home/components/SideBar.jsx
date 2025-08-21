@@ -78,13 +78,7 @@ function Sidebar() {
 
   return (
     <>
-    <motion.div
-     className="projects-container"
- initial={{ opacity: 0, x: -800 }} // sale desde la izquierda
- animate={{ opacity: 1, x: -200 }} // posición final
-  exit={{ opacity: 0, x: -100 }} // sale hacia la izquierda al cerrar
- transition={{ duration: 0.8, ease: "easeInOut" }}
->
+   
       {/* Botón hamburguesa */}
       <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? <CloseIcon /> : <MenuIcon />}
@@ -123,7 +117,7 @@ function Sidebar() {
         </nav>
         
       </div>
-    </motion.div>
+  
     </>
   );
 }

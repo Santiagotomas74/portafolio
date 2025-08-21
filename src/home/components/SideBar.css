@@ -120,7 +120,7 @@
 .hamburger {
   position: fixed; /* Esto lo hace fijo en la pantalla */
   top: 40px;       /* Ajusta la distancia desde el borde superior */
-  left: 230px;      /* Ajusta la distancia desde el borde izquierdo */
+  left: 30px;      /* Ajusta la distancia desde el borde izquierdo */
   z-index: 1100;   /* Asegura que esté por encima de otros elementos */
   background-color: #48cae4;
   padding: 8px;
@@ -146,9 +146,10 @@
   }
 
   .sidebar {
-    left: 250px; /* Esta propiedad parece un error si sidebar debe entrar desde la izquierda */
+    position: fixed;
+    left: 30px; /* Esta propiedad parece un error si sidebar debe entrar desde la izquierda */
     transform: translateX(-200%); /* Desplazado fuera de la vista inicialmente */
-    z-index: 0; /* Un z-index bajo para la sidebar cuando está cerrada */
+    z-index: 1200; /* Un z-index bajo para la sidebar cuando está cerrada */
     width: 220px;
   }
   
