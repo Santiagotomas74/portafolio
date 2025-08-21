@@ -14,13 +14,7 @@ function Projectsview() {
   const t = translations[language];
 
   return (
-    <motion.div
-      className="projects-wrapper"
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.6 }}
-    >
+    <>
       <LanguageSwitcher />
 
       <div className="projects-container">
@@ -54,7 +48,7 @@ function Projectsview() {
           </div>
         ))}
       </div>
-    </motion.div>
+    </>
   );
 }
 

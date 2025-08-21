@@ -30,7 +30,7 @@ function ProjectSelenita() {
 
       <div className="back-button-container">
         <Tooltip title={t.back}>
-          <IconButton onClick={() => navigate("/projects")} >
+          <IconButton onClick={() => navigate("/")} >
             <ArrowBackIcon fontSize="large" className="back-button" />
           </IconButton>
         </Tooltip>

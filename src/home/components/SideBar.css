@@ -1,7 +1,7 @@
 /* Estilos generales sidebar */
 .sidebar {
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: 100vh;
   left: 0;
   width: 240px;
   height: 100vh;
@@ -17,6 +17,11 @@
   transition: transform 0.3s ease-in-out;
 }
 
+.sidebar.fixed {
+  position: fixed;  /* se queda pegado en pantalla */
+  top: 0;           /* desde arriba cuando scrolleas más de 100vh */
+  left: 0;
+}
 .sidebar nav ul {
   list-style: none;
   padding: 0;
@@ -112,7 +117,11 @@
 
 
 
+.renderSection {
+  margin-left: 200px; /* Espacio para la sidebar */
+  flex: 1; /* Permite que ocupe todo el espacio disponible */
 
+}
 
 
 
@@ -130,14 +139,23 @@
   cursor: pointer;
 }
 
+
+/* Responsivo */
 /* Responsivo */
 @media (max-width: 975px) {
   .hamburger {
+   
     display: block; /* Se muestra en pantallas pequeñas */
-    /* Estas propiedades ya lo hacen fijo y visible */
-    position: fixed; /* Confirmamos que esté aquí */
-    z-index: 1800;   /* Un z-index alto para asegurar visibilidad */
-    /* top y left ya definidos arriba, se mantendrán */
+    position: fixed; /* Siempre visible */
+    top: 20px; /* Baja o sube el botón */
+    left: 20px; /* Ubícalo en la esquina izquierda */
+    z-index: 1800;   /* Encima de todo */
+    cursor: pointer;
+  }
+
+  .hamburger.active {
+    left: 240px; /* Cuando el menú se abre, lo movemos junto con la sidebar */
+    transition: left 0.3s ease;
   }
 
   .profile-wrapper {
@@ -146,23 +164,30 @@
   }
 
   .sidebar {
+    top: 0;
     position: fixed;
-    left: 30px; /* Esta propiedad parece un error si sidebar debe entrar desde la izquierda */
-    transform: translateX(-200%); /* Desplazado fuera de la vista inicialmente */
-    z-index: 1200; /* Un z-index bajo para la sidebar cuando está cerrada */
+    transform: translateX(-100%); /* Oculto al inicio */
+    z-index: 1200;
     width: 220px;
+    transition: transform 0.3s ease;
   }
-  
+
+  .sidebar.open {
+    transform: translateX(0); /* Aparece al abrirse */
+  }
+
   .sidebar nav ul {
     padding: 0 10px;
   }
 
-  .sidebar.open {
-    transform: translateX(0); /* Se mueve a la vista cuando está abierta */
-  }
   .sidebar-profile {
     width: 150px;
     height: 150px;
+  }
+
+  .renderSection {
+    margin-left: 0; 
+    flex: 1;
   }
 }
 

@@ -8,7 +8,7 @@ const ViewHome= () => {
     <>
       <Hero />
      <Sidebar />
-        <Home />
+       
         <TechStack />
        
     </>

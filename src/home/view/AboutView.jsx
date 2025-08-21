@@ -5,7 +5,7 @@ import Sidebar from "../components/SideBar";
 const ViewAbout= () => {
   return (
     <>
-        <Sidebar />
+        
         <Aboutview />
        
     </>

@@ -33,7 +33,7 @@ function ProjectJava() {
       {/* Botón fijo para volver a la página de proyectos */}
       <div className="back-button-container2">
         <Tooltip title={t.back}>
-          <IconButton onClick={() => navigate("/projects")}>
+          <IconButton onClick={() => navigate("/")}>
             <ArrowBackIcon fontSize="large" className="back-button2" />
           </IconButton>
         </Tooltip>

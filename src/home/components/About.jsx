@@ -1,6 +1,7 @@
 import React from 'react';
 import './About.css';
 import { motion } from 'framer-motion';
+import Sidebar from "../components/SideBar";
 
 import { useLanguage } from './context/LanguageContext'; // Importa el hook de idioma
 import translations from './translations/AbouTranslations'; // Importa tus traducciones
@@ -10,13 +11,8 @@ function Aboutview() {
   const t = translations[language]; // Accede a los textos del idioma actual
 
   return (
-    <motion.div
-      className="about-wrapper"
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.6 }}
-    >
+   
+    <>
         {/* Inserta el componente LanguageSwitcher aquí */}
       <LanguageSwitcher />
       <div className="about-container">
@@ -57,7 +53,8 @@ function Aboutview() {
           </ul>
         </section>
       </div>
-    </motion.div>
+   </>
+    
   );
 }
 
