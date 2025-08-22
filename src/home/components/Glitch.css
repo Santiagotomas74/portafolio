@@ -1,0 +1,129 @@
+/* Contenedor principal para centrar el texto */
+.typing-glitch-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Consolas', 'Courier New', monospace; /* Fuente estilo consola */
+  overflow: hidden; /* Oculta cualquier desbordamiento del glitch */
+}
+
+/* Estilos del texto principal */
+.typing-glitch-text {
+  font-size: 3.5rem; /* Tamaño del texto */
+  color: #e0e1dd; /* Color base del texto */
+  position: relative;
+  transition: all 0.1s ease-out; /* Transición suave para algunos cambios */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Sombra suave para el texto */
+}
+
+/* Cursor de escritura */
+.typing-glitch-cursor {
+  display: inline-block;
+  background-color: #e0e1dd; /* Color del cursor */
+  width: 4px; /* Ancho del cursor */
+  height: 1.1em; /* Altura del cursor */
+  margin-left: 8px;
+  vertical-align: middle;
+  animation: blink 0.5s step-end infinite; /* Animación de parpadeo */
+}
+
+/* Animación de parpadeo para el cursor */
+@keyframes blink {
+  from, to { background-color: transparent; }
+  50% { background-color: #e0e1dd; }
+}
+
+
+/* Efecto Glitch */
+.typing-glitch-text.glitch {
+  color: #fff; /* Texto blanco durante el glitch */
+  animation: textGlitch 0.3s linear infinite alternate; /* Animación principal del glitch */
+  text-shadow: 
+    0 0 10px var(--neon-color), /* Brillo neón */
+    0 0 20px var(--neon-color),
+    0 0 40px var(--neon-color);
+}
+
+/* Animación del glitch - Desplazamiento de capas y colores */
+@keyframes textGlitch {
+  0% {
+    text-shadow: 
+      2px 0 0 var(--neon-color), 
+      -2px 0 0 rgba(255, 0, 0, 0.7); /* Rojo para el desplazamiento */
+    transform: translateX(0px);
+  }
+  20% {
+    text-shadow: 
+      -2px 0 0 var(--neon-color), 
+      2px 0 0 rgba(0, 255, 0, 0.7); /* Verde */
+    transform: translateX(2px);
+  }
+  40% {
+    text-shadow: 
+      4px 0 0 var(--neon-color), 
+      -4px 0 0 rgba(0, 0, 255, 0.7); /* Azul */
+    transform: translateX(-2px);
+  }
+  60% {
+    text-shadow: 
+      -4px 0 0 var(--neon-color), 
+      4px 0 0 rgba(255, 255, 0, 0.7); /* Amarillo */
+    transform: translateX(0px);
+  }
+  80% {
+    text-shadow: 
+      6px 0 0 var(--neon-color), 
+      -6px 0 0 rgba(0, 255, 255, 0.7); /* Cian */
+    transform: translateX(3px);
+  }
+  100% {
+    text-shadow: 
+      -6px 0 0 var(--neon-color), 
+      6px 0 0 rgba(255, 0, 255, 0.7); /* Magenta */
+    transform: translateX(-3px);
+  }
+}
+
+/* Opcional: Vibración sutil durante el glitch */
+.typing-glitch-text.glitch::after,
+.typing-glitch-text.glitch::before {
+  content: attr(data-text); /* El texto se duplica */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-shadow: none; /* Quitamos la sombra de los pseudo-elementos */
+  z-index: -1;
+}
+
+.typing-glitch-text.glitch::before {
+  color: rgba(255, 0, 0, 0.7); /* Una capa roja */
+  left: -2px;
+  top: 2px;
+  animation: glitch-left 0.3s linear infinite alternate;
+}
+
+.typing-glitch-text.glitch::after {
+  color: rgba(0, 0, 255, 0.7); /* Una capa azul */
+  left: 2px;
+  top: -2px;
+  animation: glitch-right 0.3s linear infinite alternate;
+}
+
+@keyframes glitch-left {
+  0% { transform: translate(0px, 0px); }
+  25% { transform: translate(-3px, 3px); }
+  50% { transform: translate(0px, 0px); }
+  75% { transform: translate(-3px, 3px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+@keyframes glitch-right {
+  0% { transform: translate(0px, 0px); }
+  25% { transform: translate(3px, -3px); }
+  50% { transform: translate(0px, 0px); }
+  75% { transform: translate(3px, -3px); }
+  100% { transform: translate(0px, 0px); }
+}
+

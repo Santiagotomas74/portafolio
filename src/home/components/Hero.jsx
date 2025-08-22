@@ -1,8 +1,13 @@
 import { motion } from "framer-motion";
 import "./Hero.css"; // <-- ¡IMPORTANTE! Asegúrate de que este archivo CSS esté en el MISMO DIRECTORIO que este componente, o ajusta la ruta.
+import Glitch from './Glitch';
+
+
+   
 
 const Hero = () => {
   return (
+
     <div className="hero-container">
       <motion.div
         className="circle"
@@ -30,11 +35,24 @@ const Hero = () => {
       />
       
       <div className="hero-text">
-        <h1>Santiago <span>Taher</span></h1>
+        <div >
+      <Glitch
+        text=" Santiago Taher" 
+        typingSpeed={80} // Más rápido
+        glitchInterval={2000} // Cada 2 segundos
+        glitchDuration={400} // Dura 0.4 segundos
+        neonColor="#00dbfc" // El color neón deseado
+        loop={true} // Se repite infinitamente
+      />
+    </div>
+        
         <h2>Full-Stack Developer</h2>
          <h2><span>Portfolio</span></h2>
+       
       </div>
+       
     </div>
+    
   );
 };
 
