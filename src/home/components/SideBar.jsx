@@ -85,8 +85,7 @@ function Sidebar() {
         return <AboutView />;
       case "projects":
         return <ProjectsView />;
-      case "contact":
-        return <ContactView />;
+    
       default:
         return <HomeView />;
     }
@@ -123,9 +122,7 @@ function Sidebar() {
             <li className={activeSection === "projects" ? "active" : ""} onClick={() => setActiveSection("projects")}>
               {t.projects}
             </li>
-            <li className={activeSection === "contact" ? "active" : ""} onClick={() => setActiveSection("contact")}>
-              {t.contact}
-            </li>
+           
           </ul>
         </nav>
       </div>

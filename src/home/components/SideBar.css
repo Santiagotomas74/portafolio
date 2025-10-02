@@ -3,6 +3,7 @@
   position: absolute;
   top: 100vh;
   left: 0;
+  bottom: 1100px;
   width: 240px;
   height: 100vh;
   background-color: #0f0f0f;
@@ -21,6 +22,7 @@
   position: fixed;  /* se queda pegado en pantalla */
   top: 0;           /* desde arriba cuando scrolleas más de 100vh */
   left: 0;
+  
 }
 .sidebar nav ul {
   list-style: none;
@@ -118,7 +120,8 @@
 
 
 .renderSection {
-  margin-left: 200px; /* Espacio para la sidebar */
+  
+  margin-left: 18%; /* Espacio para la sidebar */
   flex: 1; /* Permite que ocupe todo el espacio disponible */
 
 }
@@ -142,7 +145,7 @@
 
 /* Responsivo */
 /* Responsivo */
-@media (max-width: 975px) {
+@media (max-width: 1205px) {
   .hamburger {
    
     display: block; /* Se muestra en pantallas pequeñas */

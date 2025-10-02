@@ -48,26 +48,8 @@
   color: #2c3e50;
 }
 
-/* Botón fijo arriba a la izquierda */
-.back-button-container2 {
-  position: fixed;
-  top: 30px;
-  left: 20px;
-  z-index: 9999;
-}
 
-.back-button2 {
-  color: #00dbfc;
-  background-color: #023e8a;
-  border-radius: 50%;
-  padding: 10px;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease;
-}
 
-.back-button2:hover {
-  transform: scale(1.1);
-}
 
 /* 🔽 Responsividad para pantallas pequeñas */
 @media (max-width: 975px) {

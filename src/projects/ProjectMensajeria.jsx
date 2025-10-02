@@ -25,17 +25,16 @@ function ProjectMensajeria() {
       transition={{ duration: 0.6 }}
     >
       <LanguageSwitcher />
-      <div className="back-button-container">
-        <Tooltip title={t.back}>
-          <IconButton onClick={() => navigate("/")} >
-            <ArrowBackIcon fontSize="large" className="back-button" />
-          </IconButton>
-        </Tooltip>
-      </div>
+   
       <div className="project-detail-container">
         
         <h1>{t.secureMessagingTitle}</h1>
-        <p><strong>{t.role}</strong> {t.secureMessagingRole}</p>
+        <p><strong>Rol: {t.role}</strong> {t.secureMessagingRole}</p>
+        <img
+          src="/caps/cap3.png"
+          alt="Captura de pagina de perfumes-arabes"
+          className="cert-image"
+        />
         <p><strong>{t.website}</strong> <a href={t.secureMessagingLink} target="_blank" rel="noopener noreferrer">Secure Message Hub</a></p>
         <p><strong>{t.finalProject}</strong> {t.finalProjectSubtitle}</p>
 

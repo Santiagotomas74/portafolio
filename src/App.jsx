@@ -5,6 +5,7 @@ import ProjectTruckers from './projects/View/TruckersView'
 import ProjectMensajeria from './projects/View/MensajeriaView'
 import ProjectSelenita from './projects/View/PasteleriaView'
 import ProjectJava from './projects/ProjectJAVA'
+import ProjectPerfume from "./projects/View/PerfumesView"
 import ScrollToTop from './projects/ScrollToTop';
 
 
@@ -19,6 +20,7 @@ function App() {
        
 
         <Route path="/projects/truckers-talent" element={<ProjectTruckers />} />
+        <Route path="/projects/perfumes-arabe" element={<ProjectPerfume/>}/>
         <Route path="/projects/mensajeria-segura" element={<ProjectMensajeria />} />
         <Route path="/projects/pasteleria-selenita" element={<ProjectSelenita />} />
         <Route path="/projects/java" element={<ProjectJava />} />

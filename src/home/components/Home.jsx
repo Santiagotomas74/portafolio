@@ -12,7 +12,7 @@ import { Link, IconButton } from "@mui/material";
 import { useLanguage } from './context/LanguageContext';
 import translations from './translations/HomeTranslations';
 
-import LanguageSwitcher from './LanguageSwitcher'; 
+
 
 function Homeview() {
   const { language } = useLanguage(); 
@@ -125,7 +125,7 @@ function Homeview() {
           </div>
         </div>
       
-      <LanguageSwitcher />
+   
     </>
   );
 }

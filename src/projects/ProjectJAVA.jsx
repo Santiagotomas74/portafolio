@@ -30,17 +30,10 @@ function ProjectJava() {
       {/* Añade el componente para cambiar de idioma */}
       <LanguageSwitcher />
 
-      {/* Botón fijo para volver a la página de proyectos */}
-      <div className="back-button-container2">
-        <Tooltip title={t.back}>
-          <IconButton onClick={() => navigate("/")}>
-            <ArrowBackIcon fontSize="large" className="back-button2" />
-          </IconButton>
-        </Tooltip>
-      </div>
+
 
       {/* Contenido principal del proyecto */}
-      <div className="project-detail-container2">
+      <div className="project-detail-container">
         <h1>{t.javaTitle}</h1>
         
         <p><strong>{t.role}</strong> {t.javaRole}</p>

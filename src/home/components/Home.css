@@ -22,13 +22,13 @@ body {
 }
 
 .home-container {
-  width: 87%;              /* Ocupa todo el ancho */
+  width: 97%;              /* Ocupa todo el ancho */
   perspective: 1000px;      /* Mantener efecto 3D */
   display: flex;
   justify-content: flex-end; /* Empuja el contenido al extremo derecho */
   padding-top: 20px;
   padding-right: 0;          /* Sin espacio a la derecha */
-  padding-left: 120px; /* deja espacio para la sidebar */
+ 
 }
 
 .home-content {

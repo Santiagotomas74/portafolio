@@ -28,17 +28,16 @@ function ProjectSelenita() {
       {/* Inserta el componente LanguageSwitcher */}
       <LanguageSwitcher />
 
-      <div className="back-button-container">
-        <Tooltip title={t.back}>
-          <IconButton onClick={() => navigate("/")} >
-            <ArrowBackIcon fontSize="large" className="back-button" />
-          </IconButton>
-        </Tooltip>
-      </div>
+   
     
       <div className="project-detail-container">
         <h1>{t.pasteleriaTitle}</h1>
         <p><strong>{t.role}</strong> Desarrollador Full Stack</p>
+        <img
+          src="/caps/cap2.png"
+          alt="Captura de pagina de perfumes-arabes"
+          className="cert-image"
+        />
         <p><strong>{t.website}</strong> <a href="https://pasteleria-sele.vercel.app" target="_blank" rel="noopener noreferrer" decoration="none">pasteleria-sele.vercel.app</a></p>
 
         <h3>{t.projectOverview}</h3>

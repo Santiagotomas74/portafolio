@@ -7,49 +7,62 @@ import { motion } from 'framer-motion';
 
 // Importa el hook de idioma y las traducciones
 import { useLanguage } from '../home/components/context/LanguageContext';
-import translations from './translation/TruckersTranslations';
+import translations from './translation/PerfumesTranslation';
 // Importa el nuevo componente LanguageSwitcher
 import LanguageSwitcher from '../home/components/LanguageSwitcher'; 
 
-function ProjectTruckers() {
+function ProjectPerfume() {
   const navigate = useNavigate();
-  // Obtiene el idioma actual y los textos traducidos
   const { language } = useLanguage();
   const t = translations[language];
 
   return (
     <motion.div
       className="project-detail-wrapper"
-      initial={{ opacity: 0, y: 0 }}
+      initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.6 }}
     >
-      {/* Inserta el componente LanguageSwitcher */}
+      {/* Language switcher */}
       <LanguageSwitcher />
 
- 
-
+  
+    
       <div className="project-detail-container">
-        <h1>Truckers Talent</h1>
+        <h1>Perfumería Online</h1>
+        
         <p><strong>{t.role}</strong> Desarrollador Full Stack</p>
         <img
-          src="/certificados/certificado.jpg"
-          alt="Certificado de pasantía Truckers Talent"
+          src="/caps/cap1.png"
+          alt="Captura de pagina de perfumes-arabes"
           className="cert-image"
         />
-        <p><strong>{t.techStack}</strong> React.js, Node.js, Express, PostgreSQL, JWT, Material UI</p>
+        <p>
+          <strong>Website: </strong> 
+          <a 
+            href="https://perfumes-arabes.vercel.app" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            perfumes-arabes
+          </a>
+        </p>
 
+        {/* Descripción general */}
         <h3>{t.projectOverview}</h3>
-        <p>{t.projectTruckersDescription}</p>
+        <p>{t.projectPerfumesDescription}</p>
 
+        {/* Frontend */}
         <h3>{t.frontendTitle}</h3>
         <ul>
           <li>{t.frontendPoint1}</li>
           <li>{t.frontendPoint2}</li>
           <li>{t.frontendPoint3}</li>
+          <li>{t.frontendPoint4}</li>
         </ul>
 
+        {/* Backend */}
         <h3>{t.backendTitle}</h3>
         <ul>
           <li>{t.backendPoint1}</li>
@@ -58,6 +71,7 @@ function ProjectTruckers() {
           <li>{t.backendPoint4}</li>
         </ul>
 
+        {/* Base de datos */}
         <h3>{t.databaseTitle}</h3>
         <ul>
           <li>{t.databasePoint1}</li>
@@ -65,6 +79,7 @@ function ProjectTruckers() {
           <li>{t.databasePoint3}</li>
         </ul>
 
+        {/* Seguridad */}
         <h3>{t.securityPracticesTitle}</h3>
         <ul>
           <li>{t.securityPoint1}</li>
@@ -72,12 +87,16 @@ function ProjectTruckers() {
           <li>{t.securityPoint3}</li>
         </ul>
 
-        <h3>{t.internshipCertificateTitle}</h3>
-        <p>{t.internshipCertificateDescription}</p>
-       
+        {/* Panel Admin */}
+        <h3>{t.adminPanelTitle}</h3>
+        <ul>
+          <li>{t.adminPanelPoint1}</li>
+          <li>{t.adminPanelPoint2}</li>
+          <li>{t.adminPanelPoint3}</li>
+        </ul>
       </div>
     </motion.div>
   );
 }
 
-export default ProjectTruckers;
+export default ProjectPerfume;

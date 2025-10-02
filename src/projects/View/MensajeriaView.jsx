@@ -1,6 +1,9 @@
 
 import ProjectMensajeria from "../ProjectMensajeria";
 import { motion } from "framer-motion";
+import Footer from "../../home/components/Footer";
+import NavBar from "../NavBarProject"
+
 
 const ViewHome= () => {
   return (
@@ -13,8 +16,10 @@ const ViewHome= () => {
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.6 }}
     >
+       <NavBar/>
         <ProjectMensajeria />
        </motion.div>
+       <Footer />
     </>
   );
 };
