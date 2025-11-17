@@ -51,6 +51,19 @@ function Aboutview() {
             <li><strong>{t.bestPractices}</strong> Arquitectura MVP, Arquitectura limpia, Testing con JUnit</li> {/* Texto traducido */}
           </ul>
         </section>
+
+        <h1>{t.certificates}</h1> {/* Texto traducido */}
+       
+        <img
+          src="/certificados/certificadopFullStack.png"
+          alt="Certificado de curso de desarrollo Full Stack UTN"
+          className="cert-image"
+        />
+         <img
+          src="/certificados/certificadoFront.png"
+          alt="Certificado de curso de desarrollo Frontend UTN"
+          className="cert-image"
+        />
       </div>
    </>
     

@@ -18,14 +18,19 @@ const translations = {
     aboutIntroPart4: ", y actualmente curso el tercer año de la ",
     aboutIntroPart5: " en la UNGS.",
 
-    academicTrainingTitle: "🎓 Formación Académica",
-    ungsDegree: "Universidad Nacional de General Sarmiento (UNGS) — Lic. en Sistemas (4to año en curso)",
-    leloirDegree: "Instituto Luis Federico Leloir — Bachiller en Economía (Finalizado en 2021)",
+academicTrainingTitle: "🎓 Formación Académica",
 
-    complementaryTrainingTitle: "📘 Formación Complementaria",
-    utnCourse: "Curso Full Stack Web Developer – UTN (2021)",
-    utnCourseContent: "HTML5, CSS, JavaScript, React.js, Node.js, MySQL, MongoDB",
+ungsDegree: "Universidad Nacional de General Sarmiento (UNGS) — Licenciatura en Sistemas (4.º año en curso). Formación orientada en ingeniería de software, arquitectura, prototipado, gestión de proyectos, testing y diseño centrado en el usuario.",
 
+leloirDegree: "Instituto Luis Federico Leloir — Bachiller en Economía (Finalizado en 2021). Formación con base en análisis lógico, pensamiento crítico y comprensión de procesos organizacionales.",
+
+
+complementaryTrainingTitle: "📘 Formación Complementaria",
+
+utnCourse: "Diplomatura en Desarrollo Web Full Stack – Universidad Tecnológica Nacional (UTN, 2021).",
+
+utnCourseContent: "Formación práctica en desarrollo web moderno utilizando HTML5, CSS3, JavaScript, React.js, Node.js, MySQL y MongoDB. Desarrollo de proyectos full stack, consumo de APIs REST y aplicación de buenas prácticas de programación.",
+    certificates: "Certificados",
     techStackTitle: "🛠️ Stack Técnico",
     languages: "Lenguajes:",
     frontend: "Frontend:",
@@ -53,14 +58,20 @@ const translations = {
     aboutIntroPart4: ", and I'm currently in my third year of the ",
     aboutIntroPart5: " at UNGS.",
 
-    academicTrainingTitle: "🎓 Academic Training",
-    ungsDegree: "National University of General Sarmiento (UNGS) — Bachelor's Degree in Systems (4th year in progress)",
-    leloirDegree: "Luis Federico Leloir Institute — Bachelor in Economics (Completed in 2021)",
+  academicTrainingTitle: "🎓 Academic Background",
 
-    complementaryTrainingTitle: "📘 Complementary Training",
-    utnCourse: "Full Stack Web Developer Course – UTN (2021)",
-    utnCourseContent: "HTML5, CSS, JavaScript, React.js, Node.js, MySQL, MongoDB",
+ungsDegree: "Universidad Nacional de General Sarmiento (UNGS) — Bachelor's Degree in Information Systems (4th year in progress). Focused on software engineering, architecture, prototyping, project management, testing, and user-centered design.",
 
+leloirDegree: "Instituto Luis Federico Leloir — High School Diploma in Economics (Completed in 2021). Strong foundation in logical analysis, critical thinking, and understanding of organizational processes.",
+
+
+complementaryTrainingTitle: "📘 Additional Training",
+
+utnCourse: "Full Stack Web Developer Diploma – National Technological University (UTN, 2021).",
+
+utnCourseContent: "Hands-on training in modern web development using HTML5, CSS3, JavaScript, React.js, Node.js, MySQL, and MongoDB. Built full stack projects, consumed REST APIs, and applied software development best practices.",
+
+    certificates: "Certificates",
     techStackTitle: "🛠️ Tech Stack",
     languages: "Languages:",
     frontend: "Frontend:",
