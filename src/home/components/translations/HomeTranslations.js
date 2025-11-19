@@ -1,5 +1,7 @@
 const translations = {
   es: {
+    Descript: "Desarrollador Full Stack",
+    Portfolio: "Portafolio",
     name: "Santiago Taher",
     title: "Desarrollador Full Stack",
     welcome: "¡Bienvenido a mi portafolio!",
@@ -16,6 +18,8 @@ const translations = {
     // contactTitle: "Contáctame",
   },
   en: {
+    Descript: "Full Stack Developer",
+    Portfolio: "Portfolio",
     name: "Santiago Taher",
     title: "Full Stack Developer",
     welcome: "Welcome to my portfolio!",

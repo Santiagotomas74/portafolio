@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
 import "./Hero.css"; // <-- ¡IMPORTANTE! Asegúrate de que este archivo CSS esté en el MISMO DIRECTORIO que este componente, o ajusta la ruta.
 import Glitch from './Glitch';
-
+import { useLanguage } from './context/LanguageContext'; // Importa el hook de idioma
+import translations from './translations/HomeTranslations'; // Importa tus traducciones
 
    
 
 const Hero = () => {
+  const { language } = useLanguage(); // Solo necesitamos el idioma actual, no la función de cambio aquí
+  const t = translations[language]; // Accede a los textos del idioma actual
   return (
 
     <div className="hero-container">
@@ -46,8 +49,8 @@ const Hero = () => {
       />
     </div>
         
-        <h2>Full-Stack Developer</h2>
-         <h2><span>Portfolio</span></h2>
+        <h2>{t.Descript}</h2>
+         <h2><span>{t.Portfolio}</span></h2>
        
       </div>
        
