@@ -133,7 +133,7 @@
   position: fixed; /* Esto lo hace fijo en la pantalla */
   top: 40px;       /* Ajusta la distancia desde el borde superior */
   left: 30px;      /* Ajusta la distancia desde el borde izquierdo */
-  z-index: 1100;   /* Asegura que esté por encima de otros elementos */
+  z-index: 1700;   /* Asegura que esté por encima de otros elementos */
   background-color: #48cae4;
   padding: 8px;
   border-radius: 8px;
@@ -145,7 +145,7 @@
 
 /* Responsivo */
 /* Responsivo */
-@media (max-width: 1305px) {
+@media (max-width: 1500px) {
   .hamburger {
    
     display: block; /* Se muestra en pantallas pequeñas */
