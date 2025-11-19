@@ -145,7 +145,7 @@
 
 /* Responsivo */
 /* Responsivo */
-@media (max-width: 1500px) {
+@media (max-width: 1400px) {
   .hamburger {
    
     display: block; /* Se muestra en pantallas pequeñas */
